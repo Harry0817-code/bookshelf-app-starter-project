@@ -12,8 +12,7 @@
     <!-- Impor CSS kamu di sini -->
     <link rel="stylesheet" href="css\styles.css" />
   </head>
-  <body>
-  <!-- <body onload="wellcome()" hidden> -->
+  <body onload="wellcome()" hidden>
     <header>
       <h1>Bookshelf App</h1>
       <h3>Selamat datang <span id="username"></span></h3>
@@ -21,7 +20,7 @@
 
     <main>
       <section>
-        <h2>Tambah Buku Baru</h2>
+        <h2><span id="changeTitleForm"></span></h2>
         <form id="bookForm" data-testid="bookForm">
           <div class="bookForm-group bookForm-title">
             <label for="bookFormTitle">Judul</label>
@@ -57,12 +56,16 @@
           <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
             Cari
           </button>
+          <div id="searchResultList" data-testid="searchResultList">
+            <!-- 
+              Ini adalah struktur HTML untuk masing-masing buku.
+              Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+            -->
         </form>
       </section>
 
       <section>
         <h2>Belum selesai dibaca</h2>
-
         <div id="incompleteBookList" data-testid="incompleteBookList">
           <!-- 
             Ini adalah struktur HTML untuk masing-masing buku.
@@ -73,7 +76,6 @@
 
       <section>
         <h2>Selesai dibaca</h2>
-
         <div id="completeBookList" data-testid="completeBookList">
           <!-- 
             Ini adalah struktur HTML untuk masing-masing buku.
@@ -82,7 +84,5 @@
         </div>
       </section>
     </main>
-
-    <script src="js\scripts.js"></script>
   </body>
 </html>
