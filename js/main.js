@@ -4,7 +4,7 @@ console.log('Hello, world!');
 
 // Bagian fungsi welcome (Pertama kali dibuka)
 function welcome() {
-    var name = prompt("mohon isi nama anda :","");
+    const name = prompt("mohon isi nama anda :","");
     clickbuttoncancel(name);
     var n = name.length;
 
@@ -30,9 +30,9 @@ function clickbuttoncancel(checkname) {
 }
 
 function promptempty(){
-    var name = prompt("nama tidak boleh kosong, mohon diisi :","");
+    const name = prompt("nama tidak boleh kosong, mohon diisi :","");
     clickbuttoncancel(name);
-    var n = name.length;
+    const n = name.length;
 
     if (n < 1) {
         promptempty();
@@ -93,7 +93,7 @@ const SAVED_EVENT = 'saved-book';
 function addBook() {
     const title = document.getElementById('bookFormTitle').value;
     const author = document.getElementById('bookFormAuthor').value;
-    const year = document.getElementById('bookFormYear').value;
+    const year = parseInt(document.getElementById('bookFormYear').value);
     const isComplete = document.getElementById('bookFormIsComplete').checked;
 
     const book = {
